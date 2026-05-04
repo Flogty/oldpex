@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="OldPEX - MineCraft сервер для олдов (MCPE 1.1.5)">
+    <title>OldPEX - сервер для олдов MyPEX</title>
+
+    <link rel="icon" type="image/png" href="https://mypex.ru/img/fav.png">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/font/css/fontawesome-all.css" rel="stylesheet">
+    <link rel="stylesheet" href="vendor/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendor/owlcarousel/assets/owl.theme.default.min.css">
+    <link href="vendor/animate/animate.css" rel="stylesheet">
+    <link href="css/osahan.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
+    <style>
+        body.dark-mode {
+            background-color: #121212;
+            color: #eee;
+        }
+        body.dark-mode a { color: #ffffff; }
+        body.dark-mode .navbar { background-color: #1f1f1f !important; }
+        body.dark-mode .bg-primary { background-color: #1f1f1f !important; }
+        body.dark-mode .alert { background-color: #333; color: #eee; border-color: #555; }
+        body.dark-mode .btn-light { background-color: #444; color: #eee; border: 1px solid #666; }
+        
+        /* Контейнер для частиц только в голубой зоне */
+        .particles-top {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+        
+        #particles-js-top {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+        }
+        
+        header {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .info-block {
+            background: rgba(0,0,0,0.5);
+            border-radius: 20px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 500px;
+            border: 1px solid #ff8c00;
+            position: relative;
+            z-index: 3;
+        }
+        
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            font-size: 18px;
+            border-bottom: 1px solid #ff8c0033;
+        }
+        
+        .info-row:last-child { border-bottom: none; }
+        .info-label { color: #ffaa55; font-weight: bold; }
+        .info-value { color: white; font-family: monospace; }
+        
+        .btn-donate-custom {
+            background: linear-gradient(135deg, #ff6b35, #ff8c42);
+            border: none;
+            color: white;
+            padding: 15px 40px;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: 0.3s;
+        }
+        
+        .btn-donate-custom:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+            color: white;
+        }
+        
+        footer {
+            display: none;
+        }
+        
+        .donate-buttons { gap: 10px; }
+        
+        @media (max-width: 768px) {
+            .donate-buttons { flex-direction: column; align-items: center; }
+            .donate-buttons .btn { width: 100%; max-width: 280px; }
+        }
+        
+        .donate-section {
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.1) 0%, rgba(255, 140, 66, 0.1) 100%);
+            border-radius: 20px;
+            padding: 50px 30px;
+            margin: 40px 0;
+            border: 2px solid rgba(255, 107, 53, 0.2);
+        }
+        
+        /* Навбар поверх всего */
+        .navbar {
+            position: relative;
+            z-index: 3;
+        }
+        
+        .banner-block {
+            position: relative;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body id="page-top">
+
+<header class="bg-primary text-white" style="position: relative;">
+    <!-- Частицы только в шапке -->
+    <div class="particles-top">
+        <div id="particles-js-top"></div>
+    </div>
+    
+    <nav class="navbar osahan-navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#nav"><span class="navbar-toggler-icon"></span></button>
+            <div id="nav" class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="https://vk.com/club131565695">Вк</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://discord.gg/Eded3ncp5">Дискорд</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://youtu.be/gPgs_738_mA">Как зайти</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="banner-block pb-0" id="banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <img src="https://www.dropbox.com/scl/fi/gtxebfslgemi39izifm0m/FDFFB7CF-E274-4CAF-8F40-A36570518D34.jpeg?rlkey=qk64j5mm1ef48q45a0v9nzpfj&st=8xnu062y&dl=1" alt="OldPEX logo" style="max-width: 300px; margin-bottom: 20px;">
+                    
+                    <div class="info-block">
+                        <div class="info-row">
+                            <span class="info-label">📡 IP</span>
+                            <span class="info-value">oldpex.mc-serv.fun</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">🚪 Порт</span>
+                            <span class="info-value">19133</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">📌 Версия</span>
+                            <span class="info-value">MCPE 1.1.5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="effectiv"><img class="svg" src="images/bg.svg" alt=""></div>
+</header>
+
+<section class="features-mid-block" id="donate">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <div class="donate-section">
+                    <p class="lead mb-4">Поддержи развитие сервера!</p> 
+                    <div class="d-flex justify-content-between flex-wrap donate-buttons">
+                        <a href="https://oldpex.trademc.org" target="_blank" class="btn btn-donate-custom btn-lg">
+                            <i class="fas fa-gift"></i> ДОНАТ
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Частицы ТОЛЬКО в голубой зоне (шапка)
+    particlesJS("particles-js-top", {
+        "particles": {
+            "number": {
+                "value": 80,
+                "density": {
+                    "enable": true,
+                    "value_area": 800
+                }
+            },
+            "color": {
+                "value": "#ffaa55"
+            },
+            "shape": {
+                "type": "triangle",
+                "stroke": {
+                    "width": 0,
+                    "color": "#000000"
+                }
+            },
+            "opacity": {
+                "value": 0.6,
+                "random": true,
+                "anim": {
+                    "enable": false
+                }
+            },
+            "size": {
+                "value": 4,
+                "random": true,
+                "anim": {
+                    "enable": false
+                }
+            },
+            "line_linked": {
+                "enable": true,
+                "distance": 150,
+                "color": "#ffaa55",
+                "opacity": 0.4,
+                "width": 1
+            },
+            "move": {
+                "enable": true,
+                "speed": 2,
+                "direction": "none",
+                "random": false,
+                "straight": false,
+                "out_mode": "out"
+            }
+        },
+        "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+                "onhover": {
+                    "enable": true,
+                    "mode": "repulse"
+                },
+                "onclick": {
+                    "enable": true,
+                    "mode": "push"
+                }
+            }
+        },
+        "retina_detect": true
+    });
+</script>
+
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="vendor/scrolling-nav/scrolling-nav.js"></script>
+<script src="vendor/owlcarousel/owl.carousel.js"></script>
+<script src="vendor/animate/wow.min.js"></script>
+<script src="vendor/custom/custom.js"></script>
+
+</body>
+</html>
